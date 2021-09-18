@@ -3,15 +3,31 @@
 <head>
   <meta charset="utf-8">
   
-  <title>DAN</title>
+  <title>来自许老师的宝藏秘籍-1 | DAN</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="DAN">
-<meta property="og:url" content="https://zzhaodan.github.io/index.html">
+  <meta name="description" content="目录  1.前言搭好了 Java 开发环境，我们就实战一下，来写一个 Java 应用程序，程序运行的时候能看到 ​Hello World 的输出，同时分析下从编码到运行的整个过程，都发生了什么。 2.编码输出 Hello World我们不借助任何集成开发环境，就用最原始的手写的方式来编码。Windows 用户可以直接打开记事本，macOS 用户可以在控制台键入以下命令来打开记事本： 1open -">
+<meta property="og:type" content="article">
+<meta property="og:title" content="来自许老师的宝藏秘籍-1">
+<meta property="og:url" content="https://zzhaodan.github.io/2021/09/18/%E6%89%8B%E5%86%99%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%20Java%20%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%8C%E6%89%A7%E8%A1%8C%E7%9A%84%E6%97%B6%E5%80%99%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88/index.html">
 <meta property="og:site_name" content="DAN">
+<meta property="og:description" content="目录  1.前言搭好了 Java 开发环境，我们就实战一下，来写一个 Java 应用程序，程序运行的时候能看到 ​Hello World 的输出，同时分析下从编码到运行的整个过程，都发生了什么。 2.编码输出 Hello World我们不借助任何集成开发环境，就用最原始的手写的方式来编码。Windows 用户可以直接打开记事本，macOS 用户可以在控制台键入以下命令来打开记事本： 1open -">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mqxu/wiki-image@master/uPic/image-20210918163916987.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mqxu/wiki-image@master/uPic/image-20210918164226253.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mqxu/wiki-image@master/uPic/image-20210918164338514.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mqxu/wiki-image@master/uPic/image-20210918164401925.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mqxu/wiki-image@master/uPic/image-20210918164502899.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mqxu/wiki-image@master/uPic/image-20210918164535269.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mqxu/wiki-image@master/uPic/image-20210918164650529.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mqxu/wiki-image@master/uPic/image-20210918164745465.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mqxu/wiki-image@master/uPic/image-20210918164840617.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/mqxu/wiki-image@master/uPic/image-20210918165020197.png">
+<meta property="article:published_time" content="2021-09-18T12:14:20.700Z">
+<meta property="article:modified_time" content="2021-09-18T12:29:19.094Z">
 <meta property="article:author" content="赵丹">
+<meta property="article:tag" content="Note">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/mqxu/wiki-image@master/uPic/image-20210918163916987.png">
   
     <link rel="alternate" href="/atom.xml" title="DAN" type="application/atom+xml">
   
@@ -69,9 +85,7 @@
   </div>
 </div>
 
-        <section id="main">
-  
-    <article id="post-手写的第一个 Java 应用程序，执行的时候发生了什么" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-手写的第一个 Java 应用程序，执行的时候发生了什么" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/09/18/%E6%89%8B%E5%86%99%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%20Java%20%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%8C%E6%89%A7%E8%A1%8C%E7%9A%84%E6%97%B6%E5%80%99%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88/" class="article-date">
   <time class="post-time" datetime="2021-09-18T12:14:20.700Z" itemprop="datePublished">
@@ -87,8 +101,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/18/%E6%89%8B%E5%86%99%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%20Java%20%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%8C%E6%89%A7%E8%A1%8C%E7%9A%84%E6%97%B6%E5%80%99%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88/">来自许老师的宝藏秘籍-1</a>
+    <h1 class="article-title" itemprop="name">
+      来自许老师的宝藏秘籍-1
     </h1>
   
 
@@ -183,234 +197,21 @@
     </footer>
   </div>
   
-</article>
-
-
-
-
-  
-    <article id="post-Java-1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/09/18/Java-1/" class="article-date">
-  <time class="post-time" datetime="2021-09-18T07:16:54.718Z" itemprop="datePublished">
-    <span class="post-month">9月</span><br/>
-    <span class="post-day">18</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
     
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/18/Java-1/">Note-21.9.18</a>
-    </h1>
   
+    <a href="/2021/09/18/Java-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Note-21.9.18</div>
+    </a>
+  
+</nav>
 
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h2 id="一-前言部分"><a href="#一-前言部分" class="headerlink" title="一.前言部分"></a>一.前言部分</h2><h4 id="1-要求"><a href="#1-要求" class="headerlink" title="1.要求"></a>1.要求<img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210918084948742.png" alt="image-20210918084948742"></h4><h4 id="2-阿里云oss"><a href="#2-阿里云oss" class="headerlink" title="2.阿里云oss"></a>2.<strong>阿里云oss</strong></h4><p><img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210918084908074.png" alt="image-20210918084908074"></p>
-<h4 id="3-阿里云体验实验室（免费的手把手环境搭建等等）"><a href="#3-阿里云体验实验室（免费的手把手环境搭建等等）" class="headerlink" title="3.阿里云体验实验室（免费的手把手环境搭建等等）"></a>3.<strong>阿里云体验实验室</strong>（免费的手把手环境搭建等等）</h4><p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/adc/labs/?spm=a2c6h.14164896.J_5404914170.32.69357095HYjWGp">https://developer.aliyun.com/adc/labs/?spm=a2c6h.14164896.J_5404914170.32.69357095HYjWGp</a></p>
-<h4 id="4-a阿里云开源镜像站"><a href="#4-a阿里云开源镜像站" class="headerlink" title="4.a阿里云开源镜像站"></a>4.a<strong>阿里云开源镜像站</strong></h4><p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/">https://developer.aliyun.com/mirror/</a></p>
-<h4 id="5-不可或缺的部分"><a href="#5-不可或缺的部分" class="headerlink" title="5.不可或缺的部分"></a>5.不可或缺的部分</h4><p>①.命令行与shell工具</p>
-<p>②.版本控制Git</p>
-<p>③.文本编辑Vim</p>
-<p>④.远程服务器SSH（公钥密钥/命令）</p>
-<p>⑤.快速查找文件的命令</p>
-<p>⑥.数据处理</p>
-<p>–如何快速通过命令直接轻松快速的修改、查看、分析、绘制和计算数据和文件。不再从日志文件拷贝、粘贴。不再手动手动统计数据。不再用电子表格画图。</p>
-<p>⑦.虚拟机（子系统）</p>
-<p>–HyperV</p>
-<p>–虚拟机</p>
-<p>⑧.网络安全问题的工具和技巧（隐私 ）</p>
-<p>⑨.信息的检索和整理能力</p>
-<p>⑩.键盘快捷键</p>
-<h4 id="6-VSC"><a href="#6-VSC" class="headerlink" title="6.VSC"></a>6.VSC</h4><p>①.Markdown转换成思维导图</p>
-<p>–markmap</p>
-<p>②.代码截图</p>
-<p>–Carbon</p>
-<p>③.贴代码必备</p>
-<p><a target="_blank" rel="noopener" href="https://carbon.now.sh/">https://carbon.now.sh/</a></p>
-<hr>
-<h2 id="二-Java基础"><a href="#二-Java基础" class="headerlink" title="二.Java基础"></a>二.Java基础</h2><h4 id="1-Java快速开始"><a href="#1-Java快速开始" class="headerlink" title="1.Java快速开始"></a>1.Java快速开始</h4><p>①.特点：跨平台</p>
-<h4 id="2-Java基础部分"><a href="#2-Java基础部分" class="headerlink" title="2.Java基础部分"></a>2.Java基础部分</h4><p><img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210918150246407.png" alt="image-20210918150246407"></p>
-<p>关键词：Java语言赋予了特殊含义的单词：<a target="_blank" rel="noopener" href="https://www.yuque.com/islu/sbhkkp/uwv8pu">Java关键词总结 · 语雀 (yuque.com)</a></p>
-<p><img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210918150314433.png" alt="image-20210918150314433"></p>
-<p><img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210918150339383.png" alt="image-20210918150339383"></p>
-<h4 id="3-Java高级部分"><a href="#3-Java高级部分" class="headerlink" title="3.Java高级部分"></a>3.Java高级部分</h4><h4 id="4-技术图谱部分"><a href="#4-技术图谱部分" class="headerlink" title="4.技术图谱部分"></a>4.技术图谱部分</h4><img scr="https://zdan.oss-cn-beijing.aliyuncs.com/D0EB7QXAN5%60VGCP%7D%249GFP4B.png">
-
-<p><img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210918150400749.png" alt="image-20210918150400749"></p>
-<p>✳<u>Maven!!</u></p>
-<img scr="https://zdan.oss-cn-beijing.aliyuncs.com/8N506%28W%7EYR7I%5BCMSB%60L4MXU.png">
-
-<p><img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210918151259351.png" alt="image-20210918151259351"></p>
-<p>SQL通吃（必会），python和Java互搭配</p>
-<p><img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210918151403577.png" alt="image-20210918151403577"></p>
-<h4 id="5-跨平台初体验"><a href="#5-跨平台初体验" class="headerlink" title="5.跨平台初体验"></a>5.跨平台初体验</h4><p>✳重点关注：JDK 8/11（前两个重点维护版本-LTS）/17（最新版本-Latest）</p>
-<p>✳只能有一个public class + 类名 （大头风-首字母大写）</p>
-<p>—public <u>class</u>  Hello</p>
-<p>{</p>
-<p>​    public static void <u>main</u>(String[] args)</p>
-<p>{</p>
-<p>​          <u>System.out.println</u>(“Hello World!”);</p>
-<p>​    }</p>
-<p>​       private static (object/string ) getName(int id, float height)</p>
-<p>{</p>
-<p>​                return “success”;</p>
-<p>}</p>
-<p>}    —({}表示方法实现)</p>
-<p>ps: -main只是方法名字，不是关键字</p>
-<p>编译启动</p>
-<p>–javac Hello.java</p>
-<p>–java Hello</p>
-<p>（升级）JDK 11–更简单方法编译启动</p>
-<p>✳JavaFX–桌面应用（截图/桌面单词等）跨端</p>
-<p><a target="_blank" rel="noopener" href="https://www.jetbrains.com/help/idea/javafx.html">https://www.jetbrains.com/help/idea/javafx.html</a></p>
-<h2 id="三-补充"><a href="#三-补充" class="headerlink" title="三.补充"></a>三.补充</h2> <img src="https://zdan.oss-cn-beijing.aliyuncs.com/IMG_0591.PNG">
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://zzhaodan.github.io/2021/09/18/Java-1/" data-id="cktprprtd00061kls5j166djk" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/" rel="tag">Note</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
 
 
-
-
-  
-    <article id="post-hello" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/09/17/hello/" class="article-date">
-  <time class="post-time" datetime="2021-09-17T03:35:28.000Z" itemprop="datePublished">
-    <span class="post-month">9月</span><br/>
-    <span class="post-day">17</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/17/hello/">zzhaodan</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Hi！欢迎来到-Java-小赵成长历程"><a href="#Hi！欢迎来到-Java-小赵成长历程" class="headerlink" title="Hi！欢迎来到 Java-小赵成长历程"></a>Hi！欢迎来到 Java-小赵成长历程</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://zzhaodan.github.io/2021/09/17/hello/" data-id="cktprprsy00011kls62rrfkpl" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/" rel="tag">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BE%E7%89%87/" rel="tag">图片</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-hello-world" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/09/17/hello-world/" class="article-date">
-  <time class="post-time" datetime="2021-09-17T03:03:08.640Z" itemprop="datePublished">
-    <span class="post-month">9月</span><br/>
-    <span class="post-day">17</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/17/hello-world/">简介~</a>
-    </h1>
-  
-
-        <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/else/">else</a>
-  </div>
-
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Hi! 让我瞅瞅是谁来看我blog.<br>欢迎~~ 欢迎来到小赵的Java小世界！<br>让我们一起期待它变得越来越好吧！<br>一起加油！<br> <img src="https://zdan.oss-cn-beijing.aliyuncs.com/247A5375DBA17FD37F8CB917643B3C7F.png" width="1200px"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://zzhaodan.github.io/2021/09/17/hello-world/" data-id="cktprprt200031klsa4ueg0ey" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/synopsis/" rel="tag">synopsis</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
 
 </section>
         
