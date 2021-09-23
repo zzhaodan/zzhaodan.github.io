@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>来自许老师的宝藏秘籍-2 | DAN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="————————图解Java程序的结构、变量和类型一.目录 Java程序的结构 变量和数据类型 变量 类型的种类和值 基本类型 引用类型      二.Java程序的结构​        学习一个新东⻄，建议先看它的结构，这样有了整体的认知之后，再去学习细节，就能更好的认识到每个细节点在整体中的位置和作用，可以更好的理解整体和局部之间的关系。比如现在学的是 Java 程序语言设计，它的表现形式就是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="来自许老师的宝藏秘籍-2">
+<meta property="og:url" content="https://zzhaodan.github.io/2021/09/23/%E5%9B%BE%E8%A7%A3Java%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:site_name" content="DAN">
+<meta property="og:description" content="————————图解Java程序的结构、变量和类型一.目录 Java程序的结构 变量和数据类型 变量 类型的种类和值 基本类型 引用类型      二.Java程序的结构​        学习一个新东⻄，建议先看它的结构，这样有了整体的认知之后，再去学习细节，就能更好的认识到每个细节点在整体中的位置和作用，可以更好的理解整体和局部之间的关系。比如现在学的是 Java 程序语言设计，它的表现形式就是">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210923205053751.png">
+<meta property="og:image" content="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210923205846044.png">
+<meta property="og:image" content="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210923210122098.png">
+<meta property="og:image" content="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210923210242671.png">
+<meta property="og:image" content="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210923210945129.png">
+<meta property="og:image" content="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210923211037363.png">
+<meta property="article:published_time" content="2021-09-23T12:55:23.829Z">
+<meta property="article:modified_time" content="2021-09-23T13:48:53.114Z">
+<meta property="article:author" content="赵丹">
+<meta property="article:tag" content="Note">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210923205053751.png">
+  
+    <link rel="alternate" href="/atom.xml" title="DAN" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/plugin/bganimation/bg.css">
+
+  
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://zdan.oss-cn-beijing.aliyuncs.com/IMG_0737.PNG">
+    <h2 class="author">赵丹</h2>
+    <h3 class="description"></h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>9</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>4</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>3</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main"><article id="post-图解Java程序的结构、变量和类型" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/09/23/%E5%9B%BE%E8%A7%A3Java%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B/" class="article-date">
+  <time class="post-time" datetime="2021-09-23T12:55:23.829Z" itemprop="datePublished">
+    <span class="post-month">9月</span><br/>
+    <span class="post-day">23</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      来自许老师的宝藏秘籍-2
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="————————图解Java程序的结构、变量和类型"><a href="#————————图解Java程序的结构、变量和类型" class="headerlink" title="————————图解Java程序的结构、变量和类型"></a>————————图解Java程序的结构、变量和类型</h2><h2 id="一-目录"><a href="#一-目录" class="headerlink" title="一.目录"></a>一.目录</h2><ul>
+<li>Java程序的结构</li>
+<li>变量和数据类型<ul>
+<li>变量</li>
+<li>类型的种类和值<ul>
+<li>基本类型</li>
+<li>引用类型</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="二-Java程序的结构"><a href="#二-Java程序的结构" class="headerlink" title="二.Java程序的结构"></a>二.Java程序的结构</h2><p>​        学习一个新东⻄，建议先看它的结构，这样有了整体的认知之后，再去学习细节，就能更好的认识到每个细节点在整体中的位置和作用，可以更好的理解整体和局部之间的关系。比如现在学的是 Java 程序语言设计，它的表现形式就是 Java 代码。写一个能跑的 Java程序，那就需要写个 class，class 里要有个 main 方法，这样就构成了一个完整的 Java 程序。</p>
+<p>​        其实上篇提到的 HelloWorld 程序就是一个完整的 Java 程序，它由访问修饰符、类类型、类命名、main 方法、执行语句、花括号和注释这几个核心要素构成。<img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210923205053751.png" alt="image-20210923205053751"></p>
+<ul>
+<li><input disabled="" type="checkbox"> ​        1.访问修饰符决定了被修饰对象的可访问范围，被修饰对象可以是类、变量和方法，访问范围的标识有 <u>public、protected、缺省（缺省就是什么都不写，默认）和 private。</u></li>
+</ul>
+<ul>
+<li><input disabled="" type="checkbox"> ​        2.类类型表明当前类的类型，有<u>class(普通类)、enum(枚举类)、interface(接口类)和@interface(注解类，自己写注解，不是生成注释)</u>。类名是当前类的标识，通过它来区别其它类。命名的时候一般<u>大写字母开头</u>，可以是字母数字下划线的组合，不过最规范的是大写字母开头的驼峰式命名 。</li>
+</ul>
+<p>​        3.main 方法是 Java 程序必备的一个东⻄，它是 Java 程序的执行入口，声明也是固定的。执行语句就是我们要编写的程序逻辑了，每条语句都要用;(分号)结束。</p>
+<p>​        4.花括号{}代表了当前内容的作用域，它总是<u>成对</u>出现。比如HelloWorld后边的{}里的内容，就只影响到当前这个 class，main(String[] args)后边的{}里的内容，就只影响到当前这个 main方法。</p>
+<p>​        5.注释是对代码逻辑的解释，它不是写一个 Java 程序必备的，也不会被编译到字节码文件里。好的代码注释，是能够提升代码的可读性和可维护性的。</p>
+<p>​        <u>注释有类注释（类头部位置）、方法注释（方法上面的）、行注释和多行注释</u>。（类/方法注释——写法类似，但是方法注释一般有方法参数，方法返回值。类没有，但是类有其用途，作者，时间，版本等描述。）</p>
+<h2 id="三-变量和数据类型"><a href="#三-变量和数据类型" class="headerlink" title="三.变量和数据类型"></a>三.变量和数据类型</h2><h3 id="1-变量"><a href="#1-变量" class="headerlink" title="1.变量"></a>1.变量</h3><p>​        HelloWorld 程序一般用来辅助我们判断自己环境有没有配置好，如果 HelloWorld 能运行，就说明我们 Java 环境是好的，就可以专心编程和调试了。</p>
+<p>​        编程躲不开的一个概念就是变量。什么是变量呢？</p>
+<p>​        顾名思义，就是变化的量，这个概念起源于初中数学的代数，比如方程式中的 x和 y 都是变量，x 是自变量，y 是因变量，如果基于一定的规则，只要给定一个 x 的值，就一定能得到 y 的值。</p>
+<p>​        这非常契合编程的场景：给一个输入，运行一下程序，就能得到一个确定的输出。至于输出什么样的值，取决于这个程序要实现的功能以及给定输入的值。再来看下刚才那个方程式 ：y=x+1，如果没有限定的话，x 其实可以是整数，也可以是小数，还可以是字符串。可是如果是个字符串，就无法按数学规则进行运算了。所以即便是方程式的场景，一般也会约定变量的一个类型，比如 x 是个整数。变量和数据类型变量MATLAB复制代码 y=x+11</p>
+<p>​        同样的，反映到 Java 里，Java 是一种静态类型语言，这意味着每个变量和每个表达式在编译时就需要知道类型。如果我们想定义一个变量 x，就需要指定一下它的类型，以便能够通过编译以及进行后续的运算。</p>
+<p>​        这也是 Java 变量的一个原则：先定义后使用，定义必须指定数据类型。</p>
+<p>​        比如较小的整数可以用byte num;表示。变量也可以做赋值操作，比如num = 10;就把 10 这个整数赋值给了 num 这个变量。</p>
+<p>​        另外，变量也支持传递，比如byte num2 = num;就是把 num 的值传递给num2。</p>
+<p><img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210923205846044.png" alt="image-20210923205846044"></p>
+<p>​        在计算机上，CPU 负责计算，内存负责存储待计算的数据。上图中的方块可以理解成一块内存，你会发现它是一块一块的。这就是内存的基本单位——byte(字节)。一个字节是 8 bit(位)，也就是一个字节能容纳二进制00000000~11111111所有的数字。我们的程序也是字节维度使用内存，而内存空间是有限的，就需要有指标能衡量待存储的数据大小，以避免内存超限而引起程序崩溃。</p>
+<p>​        因此，程序运行的时候，需要告诉内存，要申请多大的内存空间，也就是图里面会用多少个小方块，其次是存的值是什么，也就是图里面小方块里的值。我们的变量 num 就是申请了一个字节的空间，然后存了数字 10。</p>
+<p>​        如果 num 要用的值超过了一个字节的限度，我们就无法使用 byte 这个数据类型了，就需要定义一种新的数据类型来支撑</p>
+<h3 id="2-类型的种类和值"><a href="#2-类型的种类和值" class="headerlink" title="2.类型的种类和值"></a>2.类型的种类和值</h3><pre><code>     在 Java 的世界里，有基本类型和引用类型两种。
+     相应地，有两种数据值可以存储在变量中，作为参数传递，由方法返回，并对其进行操作: 原始值和引用值。
+</code></pre>
+<p><img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210923210122098.png" alt="image-20210923210122098"></p>
+<p>​    基本数据类型在 Java 里可分为<u>布尔类型和数字类型</u>两大类：</p>
+<p><img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210923210242671.png" alt="image-20210923210242671"></p>
+<ul>
+<li><input disabled="" type="checkbox"> ​    布尔类型表达是或者否，只有true和flase两个值，用关键字boolean表示。但 JVM 没有针对boolean的字节码指令，因此在虚拟机规范里，boolean类型在编译后会被int代替，占用4 个字节，如果是 boolean 数组，会被编译成byte数组类型，每个boolean数组元素占 1 个字节。实际情况就取决于各厂商发布的 JVM 实现了。</li>
+</ul>
+<p>​        数字类型包括了<u>整型类型和浮点类型</u>。</p>
+<ul>
+<li><input disabled="" type="checkbox"> ​    整型类型根据取值范围的不同，细分成了byte、short、int、long和char五种，分别是 8 位、16 位、32 位、64 位有符号整数和 16 位无符号整数，分别占用一个字节、两个字节、四个字节、八个字节和两个字节的内存空间。</li>
+</ul>
+<p>​        整型类型的值是以下范围的整数：</p>
+<ul>
+<li><p>byte: -128 到 127，包括边界值</p>
+</li>
+<li><p>short: -32768 到 32767，包括边界值</p>
+</li>
+<li><p>int: -2147483648 到 2147483647，包括边界值</p>
+</li>
+<li><p>long: -9223372036854775808 到 9223372036854775807，包括边界值</p>
+</li>
+<li><p>char: ‘\u0000’到‘\uffff’，包括边界值，也就是从 0 到 65535。char可表示标准的ASCII 或一个 Unicode 字符。</p>
+</li>
+<li><p><input disabled="" type="checkbox">  ​        ASCII 字符集占据 Unicode 字符集中的前 127 个值。</p>
+</li>
+</ul>
+<ul>
+<li><input disabled="" type="checkbox"> ​        浮点数指小数，科学计数法表示的时候，小数点是可以“浮动”的，所以称为浮点数。</li>
+</ul>
+<p>​        浮点类型有<u>float和double</u>两种，其值分别为 32 位 IEEE 754 浮点数和 64 位 IEEE 754浮点数。</p>
+<p>​        float可选地以后缀f或F结尾，double可选地以后缀d或D结尾。表格中的取值范围仅表示幅度，它可以是正也可以是负，负数场景在前面加个负号即可。</p>
+<ul>
+<li><input disabled="" type="checkbox"> </li>
+</ul>
+<p><img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210923210945129.png" alt="image-20210923210945129"></p>
+<p><img src="https://zdan.oss-cn-beijing.aliyuncs.com/img/image-20210923211037363.png" alt="image-20210923211037363"></p>
+<p>​        变量定义的格式是数据类型变量名;或者数据类型变量名 = 变量值;</p>
+<p>​        数据类型相当于锁定了这个变量的一个数据范围，等号是赋值符号，代表把等号右边的值赋给左边的变量，使得这个变量在后边的运算中就携带了这个值的信息。Java 是强类型语言，所以如果等号右边给的值不在变量定义的数据类型范围内，就会编译报错，这也一定程度上避免了我们写错代码。</p>
+<p>​        上面提到的变量都是基本类型的，表达的都是非常基础的数值类的信息，那如果想表达更复杂的一些信息，那就要用到引用类型了。比如最常用的String就是引用类型，常常用它来表示字符串。它底层其实就是一个char[]，也就是char类型的数组。引用类型相比于基本类型，它的核心差别在于，引用类型的变量它的内部存储的不是变量值，而是某个对象在内存中的地址。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://zzhaodan.github.io/2021/09/23/%E5%9B%BE%E8%A7%A3Java%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B/" data-id="cktwzznpq000ccglsg32pbepy" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/" rel="tag">Note</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/09/23/Java%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%90%84%E7%A7%8D%E8%BF%90%E7%AE%97%EF%BC%8C%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E4%BA%86%E4%B9%88%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          来自许老师的宝藏秘籍-3
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/09/23/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E9%83%A8%E5%88%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">思维导图部分</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">DAN</h1>
+    <h2 class="blog-subtitle"></h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://zdan.oss-cn-beijing.aliyuncs.com/IMG_0737.PNG">
+    <h2 class="author">赵丹</h2>
+    <h3 class="description"></h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>9</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>4</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>3</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="https://github.com/zzhaodan/zzhaodan.github.io" target="_blank" title="Github">
+          Github
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>友情链接</h2>
+      
+        <a class="hvr-bounce-in" href="https://github.com/zzhaodan/zzhaodan.github.io" target="_blank" title="MY Github">
+          MY Github
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2020 - 2021 赵丹<br>
+      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
+      主题-<a target="_blank" rel="noopener" href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
+      
+    </div>
+    
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+  
+<script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+  
+<link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
+
+  
+<script src="/plugin/galmenu/GalMenu.js"></script>
+
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="/" title="" class="menuItem">首页</a>
+          
+            <a href="/tags" title="" class="menuItem">标签</a>
+          
+            <a href="/categories" title="" class="menuItem">分类</a>
+          
+            <a href="/archives" title="" class="menuItem">归档</a>
+          
+            <a href="/xxxxxxxxx" title="" class="menuItem">xxx</a>
+          
+            <a href="/xxxxxxx" title="" class="menuItem">xxxx</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
